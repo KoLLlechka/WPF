@@ -13,9 +13,9 @@ namespace Labs
         public Numbers()
         {
             Random random = new Random();
-            x = random.Next(1000) / Math.Pow(10, random.Next(4));
-            y = random.Next(1000) / Math.Pow(10, random.Next(4));
-            z = random.Next(1000) / Math.Pow(10, random.Next(4));
+            x = random.Next(1000) / Math.Pow(10, random.Next(3));
+            y = random.Next(1000) / Math.Pow(10, random.Next(3));
+            z = random.Next(1000) / Math.Pow(10, random.Next(3));
         }
 
         public Numbers(double x, double y, double z)

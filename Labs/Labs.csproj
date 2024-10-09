@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="KoLLlmyak.cs" />
     <Compile Include="Numbers.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Tasks.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Labs"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="950">
+        Title="MainWindow" Height="500" Width="1000" WindowStartupLocation="CenterScreen">
     <Grid RenderTransformOrigin="0,0">
         <ComboBox x:Name="tasksComboBox" HorizontalAlignment="Left" Margin="11,35,0,0" VerticalAlignment="Top" Width="248" IsReadOnly="True" FontFamily="Lucida Console" Cursor="Hand" SelectionChanged="tasksComboBox_SelectionChanged">
             <ComboBoxItem Content="Lab 1: Задание 1. Методы: 1"/>
@@ -29,6 +29,7 @@
             <ComboBoxItem Content="Lab 1: Задание 4. Массивы: 7"/>
             <ComboBoxItem Content="Lab 1: Задание 4. Массивы: 9"/>
             <ComboBoxItem Content="Lab 2: Задание 9"/>
+            <ComboBoxItem Content="Lab 3"/>
         </ComboBox>
         <Label Content="Выберите задание:" HorizontalAlignment="Left" Height="20" Margin="11,10,0,0" VerticalAlignment="Top" Width="136" FontFamily="Lucida Console"/>
         <Label x:Name="task" Content="Задание не выбрано" HorizontalAlignment="Left" Height="280" Margin="11,60,0,0" VerticalAlignment="Top" Width="496" FontFamily="Lucida Console"/>
@@ -39,7 +40,7 @@
         <TextBox x:Name="value3" HorizontalAlignment="Left" Height="18" Margin="586,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontFamily="Lucida Console" Visibility="Collapsed"/>
         <TextBox x:Name="value1" HorizontalAlignment="Left" Height="18" Margin="586,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontFamily="Lucida Console" Visibility="Collapsed"/>
         <TextBox x:Name="value2" HorizontalAlignment="Left" Height="18" Margin="586,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" FontFamily="Lucida Console" Visibility="Collapsed"/>
-        <Button x:Name="outputButton" Content=" Вывести &#xD;&#xA;&#xD;&#xA;результат" HorizontalAlignment="Left" Height="72" Margin="753,35,0,0" VerticalAlignment="Top" Width="148" FontFamily="Lucida Console" FontSize="16" IsCancel="True" RenderTransformOrigin="0.5,0.5" Cursor="Hand" Click="outputButton_Click" Visibility="Hidden">
+        <Button x:Name="outputButton" Content=" Вывести &#xD;&#xA;&#xD;&#xA;результат" HorizontalAlignment="Left" Height="72" Margin="753,25,0,0" VerticalAlignment="Top" Width="148" FontFamily="Lucida Console" FontSize="16" IsCancel="True" RenderTransformOrigin="0.5,0.5" Cursor="Hand" Click="outputButton_Click" Visibility="Hidden">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

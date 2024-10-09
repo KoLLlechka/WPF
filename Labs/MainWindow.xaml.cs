@@ -166,6 +166,13 @@ namespace Labs
                     outputButton.Visibility = Visibility.Collapsed;
                     answer.Visibility = Visibility.Collapsed;
                     break;
+                case "Lab 3":
+                    task.Content = "Задание 1. Реализовать определение класса (поля, свойства,\r\nконструкторы, перегрузка метода ToString() для вывода полей,\r\nзаданный метод согласно варианту). Протестировать все методы,\r\nвключая конструкторы, не забывайте проверять вводимые пользователем\r\nданные на корректность!\r\n\r\nЗадание 2. Добавить к реализованному в первом задании классу\r\nуказанные в варианте перегруженные операции. Протестировать все\r\nметоды";
+                    ValueText("x =", "y =", "");
+                    answer.Content = "";
+                    VisibleValue(Visibility.Visible, Visibility.Visible, Visibility.Collapsed);
+                    ChangedTask();
+                    break;
                 default:
                     break;
             }
@@ -323,8 +330,32 @@ namespace Labs
                         !straws.IsNotTriangle())
                         sidesInt.Visibility = Visibility.Visible;
                     break;
+                case "Lab 3":
+                    answer.Content = InputIsCorrect(
+                        () => Tasks.IsStringToDouble(value1.Text) && Tasks.IsStringToDouble(value2.Text),
+                        () => ForPoint());
+                    break;
             }
         }
+
+        private string ForPoint()
+        {
+            Random random = new Random();
+            int z = random.Next(100);
+            Point coordinates = new Point(double.Parse(value1.Text), double.Parse(value2.Text));
+            Point p1 = new Point();
+            int meow = coordinates;
+            return "Расстояние от точки до начала координат: " + coordinates.Distance().ToString() +
+                "\n\nУменьшенные на 1 координаты: " + (--coordinates).ToString() +
+                "\n\nПоменянные координаты х и у местами: " + (-coordinates).ToString() +
+                "\n\nint (неявная) – результатом является целая часть\r\nкоординаты х(вводимой): " + meow +
+                "\n\ndouble (явная) – результатом является координата y: " + (double)coordinates +
+                $"\n\nЦелое число: {z}" + 
+                "\n\nPoint p - целое число (левосторонняя операция,\nуменьшается координата х): " + (coordinates - z).ToString() +
+                "\n\nЦелое число - Point p (правосторонняя операция,\nуменьшается координата y): " + (z - coordinates).ToString() +
+                "\n\nКоординаты точки p1: " + p1.ToString() +
+                "\n\nPoint p – Point p1 вычисляется расстояние до точки p,\nрезультатом должно быть вещественное число: " + (coordinates - p1);
+        } 
 
         private string ForNumbers()
         {
