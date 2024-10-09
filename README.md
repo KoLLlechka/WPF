@@ -94,7 +94,7 @@ public double Y {...};
 
 ![image](https://github.com/user-attachments/assets/53475cfa-9278-4b76-920f-ab991de59bbc)
 
-# Если пользователь ввел не корректные значения x и y
+# Если пользователь ввел некорректные значения x и y
 
 *Вывод:*
 
